@@ -5,15 +5,6 @@ let convertToRem = function(pixelValue) {
 	return calc.toFixed(10) + 'rem';
 };
 
-let generateSpacing = function(start, end, multiple = 1) {
-	let spacingObject = {};
-	const pixelValues = Array.from(new Array(end - start + 1), (v, k) => k + start).filter((n) => n % multiple === 0);
-	pixelValues.forEach((val) => {
-		spacingObject[val] = val + 'px'; //convertToRem(val);
-	});
-	return spacingObject;
-};
-
 module.exports = {
 	important: '#app',
 	theme: {
@@ -31,6 +22,7 @@ module.exports = {
 			black: '#000000',
 		},
 		iconSizes: {
+      // 'icon-tiny': '16px'
 		},
 		fontFamily: {
             sans: [
@@ -42,10 +34,10 @@ module.exports = {
             '12':  convertToRem(12),
             '13':  convertToRem(13),
             '14':  convertToRem(14),
-            '15':  convertToRem(15), 
-            '16':  convertToRem(16), 
-            '17':  convertToRem(17), 
-            '18':  convertToRem(18),  
+            '15':  convertToRem(15),
+            '16':  convertToRem(16),
+            '17':  convertToRem(17),
+            '18':  convertToRem(18),
             '19':  convertToRem(19),
             '20':  convertToRem(20),
             '21':  convertToRem(21),
@@ -105,7 +97,6 @@ module.exports = {
 			's12': '96px',
 			's13': '120px',
 			's14': '160px',
-			...generateSpacing(1, 10),
 		}),
 	},
 	purge: false,
