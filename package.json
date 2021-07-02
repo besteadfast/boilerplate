@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "nodemon",
 		"prod": "webpack --config config/build/webpack.prod.js --progress",
-		"svg": "./node_modules/svgo/bin/svgo --recursive --multipass --folder=web/assets/icons --config=./config/build/svgo.yml"
+		"icons": "./node_modules/svgo/bin/svgo --recursive --multipass --folder=web/assets/icons --config=./config/build/svgo.yml"
 	},
 	"nodemonConfig": {
 		"watch": [
@@ -17,7 +17,8 @@
 		"exec": "webpack serve --config config/build/webpack.dev.js"
 	},
 	"dependencies": {
-		"tailwindcss": "^2.0.2"
+		"tailwindcss": "^2.0.2",
+		"vue": "^2.6.14"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.9",
